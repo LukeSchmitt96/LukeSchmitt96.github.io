@@ -1,0 +1,30 @@
+- event: Start CMU
+  desc: >-
+    Started mechanical engineering master’s degree program at Carnegie Mellon University
+  inst: CMU
+  date: 2019/08/26
+- event: Grad UAkron
+  desc: >-
+    Graduated Summa Cum Laude from the University of Akron (3.78 GPA)
+  inst: UAkron
+  date: 2019/05/11
+- event: Traj Award
+  desc: >-
+    Accepted the prestigious <a href="https://www.uakron.edu/development/funds/funds.dot?id=32fa0057-824b-4977-a85c-ad16cfe5414f">College of Engineering Trajectory Award</a>
+  inst: UAkron
+  date: 2019/05/05
+- event: Senior Design Awards
+  desc: >-
+    Won first place in Health, Robotic, and Manufacturing System Design for senior design project
+  inst: UAkron
+  date: 2019/04/26
+- event: Undergrad Research Showcase
+  desc: >-
+    Accepted the Dr. Karen M. Murdy Achievement Award for winning second place at the Research Day Talk and Poster Competition for the poster titled “Rotary Torsion Fixtures for Augmentation to Existing Testing Machines: Generating Pure Torsion Loading from Axial Motion”
+  inst: UAkron
+  date: 2018/12/07
+- event: Start UAkron
+  desc: >-
+    Started mechanical engineering bachelor's degree program at the University of Akron
+  inst: UAkron
+  date: 2014/08/24

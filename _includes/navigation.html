@@ -1,0 +1,11 @@
+<nav>
+    <h3>Navigation</h3>
+    <dl>
+        {% for item in site.data.navigation %}
+            <dt>
+                &ndash;
+                <a href="{{ item.link }}">{{ item.name }}</a>
+            </dt>
+        {% endfor %}
+    </dl>
+</nav>

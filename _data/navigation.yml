@@ -1,0 +1,8 @@
+- name: Home
+  link: /
+- name: Projects
+  link: /projects.html
+- name: Organizations
+  link: /orgs.html
+- name: Awards
+  link: /awards.html
