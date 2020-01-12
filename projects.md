@@ -11,14 +11,18 @@ title: Projects
 
 ## Carnegie Mellon University 
 
-None (yet)
+### 16-868 Biomechanics & Motor Control
+
+#### Modeling Bipedal Balance Strategies Using Simscape Multibody
+Oct 2019 - Dec 2019
+
+Modeled a robust 2D bipedal controller using Simulink that recovers standing balance under disturbances
 
 ---
 
 ## The University of Akron
 
 ### Senior Design Project: Autonomous Combat Robot
-
 
 #### Mechanical Subteam
 Jan 2018 - May 2019
