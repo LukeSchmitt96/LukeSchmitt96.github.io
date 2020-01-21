@@ -1,3 +1,8 @@
+- event: Start CERLAB
+  desc: >-
+    Joined the Computational Engineering & Robotics Laboratory at Carnegie Mellon
+  inst: CMU
+  date: 2020/01/16
 - event: Start CMU
   desc: >-
     Started mechanical engineering master’s degree program at Carnegie Mellon University
@@ -5,7 +10,7 @@
   date: 2019/08/26
 - event: Grad UAkron
   desc: >-
-    Graduated Summa Cum Laude from the University of Akron (3.78 GPA)
+    Graduated Summa Cum Laude from the University of Akron
   inst: UAkron
   date: 2019/05/11
 - event: Traj Award

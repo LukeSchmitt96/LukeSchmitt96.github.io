@@ -11,7 +11,12 @@ title: Projects
 
 ## Carnegie Mellon University 
 
-None (yet)
+### Computational Engineering & Robotics Laboratory
+
+### Control Project Group
+Jan 2020 - Present
+
+Controller optimization for UAVs operated under windy conditions.
 
 ---
 
@@ -23,7 +28,7 @@ None (yet)
 #### Mechanical Subteam
 Jan 2018 - May 2019
 
-Designed, built, and analyzed a platform for the development of an autonomous combat robot
+Designed, built, and analyzed a platform for the development of an autonomous combat robot.
 
 ### UAkron NASA Robotic Mining Competition Team
 
