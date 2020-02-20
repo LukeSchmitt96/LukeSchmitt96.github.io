@@ -7,7 +7,7 @@ title: Home
 
 #### CMU
 
-First year mechanical engineering master's student attending [Carnegie Mellon University](https://www.cmu.edu/). Taking coursework focusing on control and design of robotic systems. 
+First year mechanical engineering master's student attending [Carnegie Mellon University](https://www.cmu.edu/). Taking coursework focusing on advanced control systems and robotic systems. Working under Dr. Kenji Shimada in [CERLAB](http://www.andrew.cmu.edu/user/shimada/index.htm) on a project to control a drone under windy conditions during the service and inspection of nuclear plants and facilities.
 
 #### UAkron
 
