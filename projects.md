@@ -11,7 +11,7 @@ title: Projects
 
 ### Computational Engineering & Robotics Laboratory
 
-### Control Project Group
+#### Control Project Group
 Jan 2020 - Present
 
 Controller optimization for UAVs operated under windy conditions.

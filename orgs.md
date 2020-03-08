@@ -5,13 +5,13 @@ title: Orgs
 
 # Organizations
 
-### Computational Engineering & Robotics Laboratory
-
-A laboratory that performs research on the intersection of medicine, product development, computation, and robotics.
-
 ---
 
 ## Carnegie Mellon University
+
+### Computational Engineering & Robotics Laboratory
+
+A laboratory that performs research on the intersection of medicine, product development, computation, and robotics.
 
 ---
 
