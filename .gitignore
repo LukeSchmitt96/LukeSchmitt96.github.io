@@ -3,4 +3,6 @@ _site/
 Gemfile.lock
 *.gem
 *.code-workspace
+.jekyll-cache/
+.jekyll-metadata
 
