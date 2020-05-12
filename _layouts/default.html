@@ -3,14 +3,24 @@
 <html lang="{{ site.lang | default: "en-US" }}">
 
   <head>
+    <!-- Site Title -->
     <title>Luke Schmitt | {{ page.title }} </title>
+    
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
+
+    <!-- Favicon Tag-->
+    <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg">
+    <link rel="shortcut icon" href="assets/favicon/favicon.svg" type="image/x-icon">
+
+    <!-- Google Site Ownership Verification -->
+    <meta name="google-site-verification" content="H3TLZKWsK2ywpxbIVNBtfFkZJYoX3chZ0IDDWdynTj8" />
+
+    <!-- Misc -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
-  
-    <meta name="google-site-verification" content="H3TLZKWsK2ywpxbIVNBtfFkZJYoX3chZ0IDDWdynTj8" />
+
   </head>
   
   <body>
@@ -43,8 +53,8 @@
 
       </section>
       <footer>
-        
         <p>
+          <!-- Theme Credit -->
           <small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist" target=”_blank”>orderedlist</a></small>
         </p>
       </footer>

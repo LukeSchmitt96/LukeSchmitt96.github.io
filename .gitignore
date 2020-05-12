@@ -1,8 +1,13 @@
-_site/
-.sass-cache
+# Ruby Stuff
 Gemfile.lock
 *.gem
-*.code-workspace
+
+# Jekyll Stuff
+/_site/
+_site
+.sass-cache
 .jekyll-cache/
 .jekyll-metadata
 
+# VS Code Stuff
+*.code-workspace

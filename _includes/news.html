@@ -1,17 +1,13 @@
-<h1 id="news">News</h1>
-
 <table>
-
     <thead>
         <tr>
-        <th style="text-align: left">Date</th>
-        <th style="text-align: left">Institution</th>
-        <th style="text-align: left">Event Description</th>
+            <th style="text-align: left">Date</th>
+            <th style="text-align: left">Institution</th>
+            <th style="text-align: left">Event Description</th>
         </tr>
     </thead>
 
     <tbody>
-
         {% for item in site.data.news %}
             <tr>
                 <td style="text-align: left"><strong>{{ item.date }}</strong></td>
