@@ -235,7 +235,7 @@ footer h3, header h3, .contact h3 {
   text-decoration: none;
   font-size: 20px;
   border-top: solid;
-  border-color: rgb(240, 240, 240)
+  border-color: rgb(240, 240, 240);
 }
 
 .navigation a:hover:not(:active) {
@@ -301,6 +301,7 @@ footer h3, header h3, .contact h3 {
     font-size: 20px;
     padding-left: 10px;
     display: block;
+    border-color: rgb(240, 240, 240);
   }
 
   .navigation hr{
