@@ -1,12 +1,9 @@
 <nav>
     <h3>Navigation</h3>
-    <dl>
+    <ul>
         {% for item in site.data.navigation %}
-            <dt>
-                &ndash;
-                <a href="{{ item.link }}">{{ item.name }}</a>
-            </dt>
+            <li><a href="{{ item.link }}">{{ item.name }}</a></li>
         {% endfor %}
-        <dt>&ndash; <a href="/pdfs/resume.pdf" target="_blank">Resume</a></dt>      
-    </dl>
+        <li><a href="/pdfs/resume.pdf" target="_blank">Resume</a></li>      
+    </ul>
 </nav>

@@ -21,6 +21,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="assets/js/activenav.js">
+        
+  </script>
+
   </head>
   
   <body>
@@ -28,37 +33,47 @@
     <div class="wrapper">
 
       <header>
-
         <!-- Title & Portrait -->
         <h1><a href="{{ "/" | absolute_url }}">Luke Schmitt</a></h1>
-        <img src="assets/img/portait2018-removebg.png" alt="Portrait" />
+        <img src="assets/img/portait2018.png" alt="Portrait" />
 
-        <!-- Navigation -->
-        {% include navigation.html %}
-
+        <p>
+          Studying at Carnegie Mellon University.
+          I enjoy working on interesting control problems.
+        </p>
         <hr />
 
-        <!-- Contact Information -->
-        <h3>Contact Me:</h3>
-        <dl>
-            <dt>&ndash; <a href="mailto:luke@lukeschmitt.me" target=”_blank”>Email</a></dt>
-            <dt>&ndash; <a href="https://www.linkedin.com/in/luke-schmitt/" target=”_blank”>LinkedIn</a></dt>
-        </dl>
-        
+        <div class="contact">
+          <!-- Contact Information -->
+          <table>
+            <tr>
+              <th><a href="mailto:luke@lukeschmitt.me" target=”_blank”>Email</a></th>
+              <th><a href="https://www.linkedin.com/in/luke-schmitt/" target=”_blank”>LinkedIn</a></th>
+              <th><a href="https://github.com/LukeSchmitt96" target=”_blank”>GitHub</a></th>
+            </tr>
+          </table>
+        </div>
       </header>
 
       <section>
+        <div class="navigation">
+          <!-- Navigation -->
+            <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="/projects.html">Projects</a></li>
+              <li><a href="/orgs.html">Organizations</a></li>
+              <li><a href="/awards.html">Awards</a></li>
+              <li><a href="/pdfs/resume.pdf" target="_blank">Resume</a></li>      
+            </ul>
+        </div>
 
-      {{ content }}
-
+        <!-- Include Site Content -->
+        {{ content }}
       </section>
-      <footer>
-        <p>
-          <!-- Theme Credit -->
-          <small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist" target=”_blank”>orderedlist</a></small>
-        </p>
-      </footer>
+
     </div>
+
     <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
+
   </body>
 </html>
