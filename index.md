@@ -5,7 +5,7 @@ title: Home
 
 # Bio
 
-I am a mechanical engineering master's student attending [Carnegie Mellon University](https://www.cmu.edu/).
+I'm a mechanical engineering master's student attending [Carnegie Mellon University](https://www.cmu.edu/).
 Currently, I am working under Dr. Kenji Shimada in the [CERLAB](http://www.andrew.cmu.edu/user/shimada/index.htm) on a project to implement optimal control strategies on a quadrotor under windy conditions during the service and inspection of nuclear plants and facilities.
 
 I graduated from [The University of Akron](https://uakron.edu/) with a BS in mechanical engineering. 
