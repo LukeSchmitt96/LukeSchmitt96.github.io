@@ -6,3 +6,5 @@ portrait: "assets/img/portrait.jpg"
 description: "MechE Master's Student @ CMU"
 show_downloads: false
 theme: jekyll-theme-minimal
+safe: TRUE
+baseurl: 

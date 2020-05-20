@@ -3,6 +3,7 @@
 <html lang="{{ site.lang | default: "en-US" }}">
 
   <head>
+    
     <!-- Site Title -->
     <title>Luke Schmitt | {{ page.title }} </title>
     
@@ -10,8 +11,8 @@
     <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
 
     <!-- Favicon Tag-->
-    <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg">
-    <link rel="shortcut icon" href="assets/favicon/favicon.svg" type="image/x-icon">
+    <link rel="icon" type="image/svg+xml" href="{{ site.baseurl }}/favicon.svg">
+    <link rel="shortcut icon" href="{{ site.baseurl }}/favicon.svg" type="image/x-icon">
 
     <!-- Google Site Ownership Verification -->
     <meta name="google-site-verification" content="H3TLZKWsK2ywpxbIVNBtfFkZJYoX3chZ0IDDWdynTj8" />
@@ -22,9 +23,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="assets/js/activenav.js">
-        
-  </script>
 
   </head>
   
@@ -32,44 +30,15 @@
 
     <div class="wrapper">
 
-      <header>
-        <!-- Title & Portrait -->
-        <h1><a href="{{ "/" | absolute_url }}">Luke Schmitt</a></h1>
-        <img src="assets/img/portait2018.png" alt="Portrait" />
-
-        <p>
-          Studying at Carnegie Mellon University.
-          I enjoy working on interesting control problems.
-        </p>
-        <hr />
-
-        <div class="contact">
-          <!-- Contact Information -->
-          <table>
-            <tr>
-              <th><a href="mailto:luke@lukeschmitt.me" target=”_blank”>Email</a></th>
-              <th><a href="https://www.linkedin.com/in/luke-schmitt/" target=”_blank”>LinkedIn</a></th>
-              <th><a href="https://github.com/LukeSchmitt96" target=”_blank”>GitHub</a></th>
-            </tr>
-          </table>
-        </div>
-      </header>
+      {% include header.html %}
 
       <section>
-        <div class="navigation">
-          <!-- Navigation -->
-            <ul>
-              <li><a href="/">Home</a></li>
-              <li><a href="/projects.html">Projects</a></li>
-              <li><a href="/orgs.html">Organizations</a></li>
-              <li><a href="/awards.html">Awards</a></li>
-              <li><a href="/pdfs/resume.pdf" target="_blank">Resume</a></li>      
-            </ul>
-            <hr />
-        </div>
+
+        {% include navigation.html %}
 
         <!-- Include Site Content -->
         {{ content }}
+      
       </section>
 
     </div>
