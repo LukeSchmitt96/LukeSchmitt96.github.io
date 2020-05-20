@@ -3,8 +3,8 @@
 (function(){
     
     // physics constants
-    const SimStepsPerFrame = 1000;
-    const FrameDelayMillis = 10;
+    const SimStepsPerFrame = 1;
+    const FrameDelayMillis = 100;
     const gravity = -9.8;
 
     // animation constants
@@ -56,7 +56,7 @@
             this.x0     = x0;               // first joint x coord
             this.y0     = y0;               // first joint y coord
             this.l      = 1;                // length of pendulum
-            this.theta  = 0;            // angle of pendulum relative to world
+            this.theta  = 0;                // angle of pendulum relative to world
             this.m      = 1;                // mass of pendulum
 
             this.b      = 10;               // damping ratio of pendulum
@@ -129,7 +129,7 @@
 
         // method used to update the simulation given a time increment 
         // based on the  physical dynamics of the system
-        Update(dt) {
+        Update(dt,u) {
             for (pend of this.pendList) {
                 // Calculate the force acting on the pendulum
 
@@ -154,13 +154,11 @@
                 //  ==>     dtheta = dt * ddtheta 
                 //                 = dt * tau
                 //                 = dt * ( u - g/l*sin(theta) )
-                
-                //pend.dtheta = dt * ( sim.u - pend.m*sim.gravity*pend.l/Math.cos(pend.theta) );
-                //console.log(dt * ( sim.u - pend.m*sim.gravity*pend.l/Math.cos(pend.theta) ))
+
+                pend.dtheta = dt * ( u - pend.m*sim.gravity*pend.l*Math.cos(pend.theta) );
 
                 // update position using the ang velocity in this increment
-                //pend.theta += dt * pend.dtheta;
-                //console.log(dt * pend.theta)
+                pend.theta += dt * pend.dtheta;
             }
         }
     }
@@ -185,8 +183,6 @@
     function Render(sim) {
         const canvas = document.getElementById('pend');
         const context = canvas.getContext('2d');
-        
-        sim.u = document.getElementById("control_slider").value;
 
         // clear
         context.clearRect(0, 0, canvas.clientWidth, canvas.clientHeight);
@@ -205,9 +201,9 @@
         // check to see if the user wants to pause the simulation
         if (document.getElementById("sim_run_check").checked) {
             const dt = (0.001 * FrameDelayMillis) / SimStepsPerFrame;
-            console.log(`dt = ${dt}`);
             for (let i=0; i < SimStepsPerFrame; ++i) {
-                sim.Update(dt);
+                const u = -document.getElementById("control_slider").value;
+                sim.Update(dt,u);
             }
             Render(sim);
             
