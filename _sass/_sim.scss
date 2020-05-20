@@ -1,0 +1,82 @@
+/*
+
+    THIS SCSS PARTIAL DESCRIBES THE STYLE USED BY INTERACTIONS WITH
+    SIMULATIONS. THIS INCLUDES FORMS, DESCRIPTIONS AND THE CANVAS ITSELF
+
+*/
+
+.control_input_form {
+    width: 30%;
+}
+
+.form_label p {
+    margin-bottom: 2px;
+}
+
+.control_input_container th, .control_input_container p {
+    border-bottom: none;
+    margin-bottom: 2px;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 10px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    display: inline;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: $nav-color;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: $nav-color;
+    cursor: pointer;
+}
+
+.num {
+    width: 3ex;
+}
+
+// remove number input arrows //
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/****************************************/
+/*             CANVAS THEME             */
+/****************************************/
+
+div .canvas_container {
+    width: 800%;
+    height: 100%;
+}
+
+canvas .pend {
+    width: 800%;
+    height: 1000px;
+}

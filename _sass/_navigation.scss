@@ -1,0 +1,125 @@
+$nav-height: 45px;
+$grid-columns:  20% 20% 20% 20% 20%;
+
+/*****************/
+/* NAV BAR STYLE */
+/*****************/
+
+.navigation {
+  display: grid;
+  grid-template-columns: $grid-columns;
+  grid-gap: 0px;
+  width: 100%;
+  font-size: 0;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 30px;
+  align-items: center;
+  background-color: $nav-color;
+}
+
+.navigation div {
+  height: $nav-height;
+  background-color: $bg-color;
+}
+
+.navigation div a {
+  border-top: solid $nav-color 3px;
+}
+
+.navigation span {
+  height: $nav-height;
+}
+
+.navigation div a {
+  display: block;
+  text-decoration: none;
+  font-size: 20px;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  padding-top: 10px;
+}
+
+
+//////////////////////////////////////
+////////// dropdown content //////////
+//////////////////////////////////////
+
+.dropdown:hover {
+  display: block;
+  background-color: $bg-color;
+  box-shadow: 5px 11px 10px 8px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: $bg-color;
+  width: 160px;
+  padding: 0px 0px;
+  z-index: 1;
+  text-align: center;
+  height: $nav-height;
+  padding-bottom: $nav-height;
+  height: $nav-height * 2;
+}
+
+.dropdown-content div {
+  height: $nav-height;
+}
+
+.dropdown-content div a {
+  border: none;
+  height: $nav-height;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  height: $nav-height;
+  color: black;
+  border: none;
+  box-shadow: 5px 16px 10px 8px rgba(0,0,0,0.2);
+}
+
+
+
+.dropdown-content a {
+  display: block;
+  padding: none;
+}
+
+.dropdown:hover .dropdown-content a {
+  height: $nav-height;
+}
+
+
+.dropdown:hover a {
+  background-color: $bg-color;
+}
+
+///////////////////////////////
+////// active navigation //////
+///////////////////////////////
+
+.navigation .active {
+  background-color: $nav-color;
+  color: black;
+}
+
+
+.navigation .active a:hover {
+  background-color: $nav-color;
+  color: black;
+}
+
+.navigation a:hover:not(:active), .dropdown:hover:not(:active) {
+  background-color: $nav-color;
+  color: black;
+}
+
+.navigation div div a.active {
+  background-color: $nav-color;
+  color: black;
+}

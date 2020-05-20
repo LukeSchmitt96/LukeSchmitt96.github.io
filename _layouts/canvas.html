@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html lang="{{ site.lang | default: "en-US" }}">
+
+  <head>
+    <!-- Site Title -->
+    <title>Luke Schmitt | {{ page.title }} </title>
+    
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
+
+    <!-- Favicon Tag-->
+    <link rel="icon" type="image/svg+xml" href="{{ site.baseurl }}/favicon.svg">
+    <link rel="shortcut icon" href="{{ site.baseurl }}/favicon.svg" type="image/x-icon">
+
+    <!-- Google Site Ownership Verification -->
+    <meta name="google-site-verification" content="H3TLZKWsK2ywpxbIVNBtfFkZJYoX3chZ0IDDWdynTj8" />
+
+    <!-- Misc -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Javascript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <script src="https://unpkg.com/mathjs@7.0.0/dist/math.min.js"></script>               <!-- https://mathjs.org/ -->
+    <script src="https://unpkg.com/optimization-js@latest/dist/optimization.js"></script> <!-- http://optimization-js.github.io/optimization-js/ -->
+    <script type="application/javascript" src= {{ "assets/js/" | relative_url | append: page.script | append: ".js" }}></script>
+
+  </head>
+  
+  <body>
+
+    <div class="wrapper">
+
+      {% include header.html %}
+
+      <section>
+
+        {% include navigation.html %}
+
+        <!-- Include Site Content -->
+        {{ content }}
+
+        <!-- Simulation Control -->
+        <div class="control_input_container">
+
+          <form id="control_input_form" class="control_input_form" onsubmit="return false">
+            <p class="form_label">Control Input [N-m]</p>
+            <table>
+              <tr>
+                <th>
+                  <input type="range"  min="-5" max="5" 
+                           id ="control_slider" class="slider" step="1" value="0">
+                </th>
+                <th>
+                  <input type="number" min="-5" max="5" onclick="this.select();"
+                           id ="control_num" class="num" step="1" value="0">
+                </th>
+                <th>
+                  <p style="display:inline;">Run Sim:</p>
+                  <input type="checkbox" id="sim_run_check" class="sim_run_check" style="display: inline;">
+                </th>
+              </tr>
+            </table>
+            
+          </form>
+        </div>
+
+        <!-- Simulation Container -->
+        <div id="canvas_container">
+          <canvas id= {{ page.canvas }} width="800px" height="500px" style="border: 1px solid grey;">
+            Your browser does not support this simulation.
+            It worked using FireFox 76.0.1 (64-bit) on Ubuntu 18.04.
+          </canvas>
+        </div>
+      
+      </section>
+
+    </div>
+
+    <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
+    <script src="{{ site.baseurl }}/assets/js/control_slider.js"></script>
+    </script>
+
+  </body>
+</html>
