@@ -5,78 +5,80 @@
 
 */
 
-.control_input_form {
-    width: 30%;
-}
+.control_input_container {
+    th, p {
+        border-bottom: none;
+        margin-bottom: 2px;
+        width: 33%;
+    }
+    input.slider {
+        -webkit-appearance: none;
+        width: 100%;
+        height: 10px;
+        background: #d3d3d3;
+        outline: none;
+        opacity: 0.7;
+        -webkit-transition: .2s;
+        transition: opacity .2s;
+    }
+    input.slider:hover {
+        opacity: 1;
+    }
+    input.slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        background: $nav-color;
+        cursor: pointer;
+    }
+    input.slider::-moz-range-thumb {
+        width: 20px;
+        height: 20px;
+        background: $nav-color;
+        cursor: pointer;
+    }
+    input.num {
+        width: 3ex;
+    }
 
-.form_label p {
-    margin-bottom: 2px;
-}
-
-.control_input_container th, .control_input_container p {
-    border-bottom: none;
-    margin-bottom: 2px;
-}
-
-.slider {
+    // remove number input arrows //
+    /* Chrome, Safari, Edge, Opera */
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
     -webkit-appearance: none;
-    width: 100%;
-    height: 10px;
-    background: #d3d3d3;
-    outline: none;
-    opacity: 0.7;
-    -webkit-transition: .2s;
-    transition: opacity .2s;
-    display: inline;
+    margin: 0;
+    }
+
+    /* Firefox */
+    input[type=number] {
+    -moz-appearance: textfield;
+    }
 }
 
-.slider:hover {
-    opacity: 1;
+// output section
+div.output_container {
+    padding-top: 20px;
+    margin: 0;
+    p {
+        margin-bottom: 0;
+    };
+    h2 {
+        margin-bottom: 5px;
+    }
 }
 
-.slider::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 20px;
-    height: 20px;
-    background: $nav-color;
-    cursor: pointer;
-}
 
-.slider::-moz-range-thumb {
-    width: 20px;
-    height: 20px;
-    background: $nav-color;
-    cursor: pointer;
-}
-
-.num {
-    width: 3ex;
-}
-
-// remove number input arrows //
-/* Chrome, Safari, Edge, Opera */
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-/* Firefox */
-input[type=number] {
-  -moz-appearance: textfield;
-}
 
 /****************************************/
 /*             CANVAS THEME             */
 /****************************************/
 
-div .canvas_container {
-    width: 800%;
-    height: 100%;
-}
-
-canvas .pend {
-    width: 800%;
-    height: 1000px;
+div.canvas_container {
+    text-align: center;
+    canvas.pend {
+        width: 500px;
+        height: 500px;
+        border: 1px solid gray;
+    }
 }

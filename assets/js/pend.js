@@ -8,8 +8,12 @@
     const gravity = -9.8;
 
     // animation constants
-    const simCenterX = 400;
+    const simCenterX = 250;
     const simCenterY = 250;
+
+    // document elements
+    const dtheta_output = document.getElementById('dtheta_output');
+    const theta_output  = document.getElementById('theta_output');
 
     let sim;
 
@@ -59,7 +63,7 @@
             this.theta  = 0;                // angle of pendulum relative to world
             this.m      = 1;                // mass of pendulum
 
-            this.b      = 10;               // damping ratio of pendulum
+            this.b      = 1;                // damping ratio of pendulum
             this.angVel = 0;                // angular velocity of the the pendulum
             this.dtheta = 0;                // angular velocity of pendulum
             
@@ -135,30 +139,32 @@
 
                 //  Dynamics of a simple pendulum:
                 //  Derive using Lagrangian Mechanics
-                //  m*l^2*ddtheta(t) + m*g*l*sin(theta(t)) = Q
+                //  m*l^2*ddtheta(t) + m*g*l*cos(theta(t)) = Q
                 //  where Q = -b*dtheta(t) + u(t)
                 //  and where theta is measured ccw from 6 o'clock
 
                 //  Consider the case of a constant control input
-                //  m*l^2*ddtheta + b*dtheta + m*g*l*sin(theta) = u
+                //  m*l^2*ddtheta + b*dtheta + m*g*l*cos(theta) = u
 
                 //  The state space realization looks like:
 
                 //  For now, we will assume that b = 0 and u = 0
-                //  ==>     m*l^2*ddtheta + m*g*l*sin(theta) = 0
+                //  ==>     m*l^2*ddtheta + m*g*l*cos(theta) = 0
 
                 //  Solving for ddtheta gives
-                //  ==>     ddtheta = -g/l*sin(theta)
+                //  ==>     ddtheta = -g/l*cos(theta)
                 
                 // ddtheta = dtheta/dt 
                 //  ==>     dtheta = dt * ddtheta 
                 //                 = dt * tau
-                //                 = dt * ( u - g/l*sin(theta) )
+                //                 = dt * ( u - g/l*cos(theta) )
 
-                pend.dtheta = dt * ( u - pend.m*sim.gravity*pend.l*Math.cos(pend.theta) );
+                pend.dtheta += dt * ( u - pend.m*sim.gravity*pend.l*Math.cos(pend.theta) )/pend.b;
 
                 // update position using the ang velocity in this increment
                 pend.theta += dt * pend.dtheta;
+
+                updateOutputs(pend.dtheta,pend.theta);
             }
         }
     }
@@ -199,7 +205,7 @@
     function AnimationFrame() {
 
         // check to see if the user wants to pause the simulation
-        if (document.getElementById("sim_run_check").checked) {
+        if (!document.getElementById("sim_run_check").checked) {
             const dt = (0.001 * FrameDelayMillis) / SimStepsPerFrame;
             for (let i=0; i < SimStepsPerFrame; ++i) {
                 const u = -document.getElementById("control_slider").value;
@@ -209,6 +215,11 @@
             
         };
         window.setTimeout(AnimationFrame, FrameDelayMillis);
+    }
+
+    function updateOutputs(dtheta,theta) {
+        document.getElementById("dtheta_output").innerHTML = `dtheta = ${dtheta.toFixed(3)} rad/s`;
+        document.getElementById("theta_output").innerHTML =  `theta  = ${theta.toFixed(3)} rad`;
     }
 
     window.onload = function() {

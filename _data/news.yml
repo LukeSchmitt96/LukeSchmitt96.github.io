@@ -1,3 +1,8 @@
+- event: Start WEC
+  desc: >-
+    Began working at <a href="https://westinghouse.com/" target="_blank">Westinghouse Electric Company</a> as a Robotics Engineer
+  inst: WEC
+  date: 2020/05/18
 - event: Start CERLAB
   desc: >-
     Joined the Computational Engineering & Robotics Laboratory at Carnegie Mellon

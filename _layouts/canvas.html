@@ -27,6 +27,12 @@
     <script src="https://unpkg.com/mathjs@7.0.0/dist/math.min.js"></script>               <!-- https://mathjs.org/ -->
     <script src="https://unpkg.com/optimization-js@latest/dist/optimization.js"></script> <!-- http://optimization-js.github.io/optimization-js/ -->
     <script type="application/javascript" src= {{ "assets/js/" | relative_url | append: page.script | append: ".js" }}></script>
+    <script>
+      MathJax = {
+        tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+      };
+      </script>
+      <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 
   </head>
   
@@ -43,46 +49,70 @@
         <!-- Include Site Content -->
         {{ content }}
 
+        <div class="math_content">
+          <p>
+            Calculate the force acting on the pendulum
+          <p>
+            Derive the equations of motion using Lagrangian mechanics
+          </p>
+          <p>
+            $$ ml^2\ddot{\theta(t)}+mgl\cos(\theta(t)) = -b\dot{\theta}(t) + u(t) $$
+          </p>
+          <p>
+            \begin{align}
+            \dot{x} & = f(x,u) + g(x)*u         \\
+                    & = (u - mgl\cos(\theta))/b \\
+            \end{align}
+          </p>
+          <p>
+
+          </p>
+        </div>
+
         <!-- Simulation Control -->
         <div class="control_input_container">
-
-          <form id="control_input_form" class="control_input_form" onsubmit="return false">
+          <h2>Control Panel</h2>
+          <form id="control_input_form" class="controseany68604/20/2020seany68604/20/2020l_input_form" onsubmit="return false">
             <p class="form_label">Control Input [N-m]</p>
             <table>
               <tr>
                 <th>
-                  <input type="range"  min="-7.5" max="7.5" 
+                  <input type="range"  min="-2.5" max="2.5" 
                            id ="control_slider" class="slider" step="0.1" value="0">
                 </th>
-                <th>
-                  <input type="number" min="-7.5" max="7.5" onclick="this.select();"
+                <th style="text-align: center;">
+                  <input type="number" min="-2.5" max="2.5" onclick="this.select();"
                            id ="control_num" class="num" step="0.1" value="0">
                 </th>
-                <th>
-                  <!--<p style="display:inline;">Run Sim:</p>-->
-                  <input type="checkbox" id="sim_run_check" class="sim_run_check" style="display: inline;">
+                <th style="text-align: center;">
+                  <input type="checkbox" id="sim_run_check" class="sim_run_check">
+                  <label for="sim_run_check">Pause Simulation</label>
                 </th>
               </tr>
             </table>
-            
           </form>
         </div>
 
         <!-- Simulation Container -->
-        <div id="canvas_container">
-          <canvas id= {{ page.canvas }} width="800px" height="500px" style="border: 1px solid grey;">
+        <div id="canvas_container" class="canvas_container">
+          <canvas id="{{ page.canvas }}" class="{{ page.canvas }}" width="500px" height="500px">
             Your browser does not support this simulation.
-            It worked using FireFox 76.0.1 (64-bit) on Ubuntu 18.04.
+            It was developed using FireFox 76.0.1 (64-bit) on Ubuntu 18.04.
           </canvas>
         </div>
-      
+
+        <div class="output_container">
+          <h2>Outputs</h2> 
+          <span><p id="dtheta_output"></p></span>
+          <span><p id="theta_output"></p></span>
+        </div>
+
       </section>
 
     </div>
 
     <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
     <script src="{{ site.baseurl }}/assets/js/control_slider.js"></script>
-    </script>
 
   </body>
 </html>
