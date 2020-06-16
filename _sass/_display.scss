@@ -1,7 +1,25 @@
-
 /****************************************/
 /* PLATFORM & WINDOW SIZE DISPLAY STYLE */
 /****************************************/
+
+@media print, screen and (max-width: 1350px) {
+    div.wrapper {
+        width: 1000px;
+        section {
+            width: 600px;
+        }
+    }
+
+}
+
+@media print, screen and (max-width: 1080px) {
+    div.wrapper {
+        width: 800px;
+        section {
+            width: 500px;
+        }
+    }
+}
 
 @media print, screen and (max-width: 960px) {
 
@@ -10,14 +28,33 @@
         margin:0;
     }
 
-    header, section, footer {
+    div section, div footer {
         float:none;
         position:static;
         width:auto;
     }
 
-    header {
+    div header {
+        float:none;
+        position: static;
+        width: 500px;
         padding-right:100px;
+        margin-right: 0px;
+        img {
+            width: 30%;
+            float: left;
+            margin-bottom: 20px;
+        }
+        p {
+            padding: 0;
+            width: 60%;
+            float: right;
+        }
+        hr {
+            height: 0;
+            margin: 0;
+            width: 0;
+        }
     }
 
     section {
@@ -37,61 +74,85 @@
 
 @media print, screen and (max-width: 800px) {
 
-.navigation li {
-    width: 100%;
-    padding: 0;
-}
-
-.navigation li a {
-    text-align: left;
-    border-top: 0;
-    border-left: solid;
-    width: 100%;
-    font-size: 20px;
-    padding-left: 10px;
-    display: block;
-    border-color: $nav-color;
-}
+    .navigation {
+        grid-template-columns: 100%;
+        // grid-template-rows: 20% 20% 20% 20% 20%;
+        grid-template-rows: 60px 60px 60px 60px 60px;
+        background-color: $bg-color;
+        border-left: solid;
+        border-color: $nav-color;
+        div {
+            width: 100%;
+            height: 100%;
+            
+            a {
+            text-align: left;
+            border-top: 0;
+            height: 100%;
+            width: 100%;
+            font-size: 20px;
+            padding-left: 10px;
+            padding-top: 0;
+            display: block;
+            }
+        }
+    }
 
 }
 
 @media print, screen and (max-width: 720px) {
-body {
-    word-wrap:break-word;
+
+    div header {
+        width: 100%;
+
+    }
+
+    body {
+        word-wrap:break-word;
+    }
+
+    header {
+        padding:0;
+    }
+
+    header ul, header p.view {
+        position:static;
+    }
+
+    pre, code {
+        word-wrap:normal;
+    }
+
 }
 
-header {
-    padding:0;
-}
-
-header ul, header p.view {
-    position:static;
-}
-
-pre, code {
-    word-wrap:normal;
-}
-
+@media print, screen and (max-width: 580px) {
+    div.wrapper {
+        width: 100%;
+        section {
+            width: 100%;
+        }
+    }
 }
 
 @media print, screen and (max-width: 480px) {
-body {
-    padding:15px;
-}
 
-.downloads {
-    width:99%;
-}
+    body {
+        padding:15px;
+    }
 
-.downloads li, .downloads li + li + li {
-    width:33%;
-}
+    .downloads {
+        width:99%;
+    }
+
+    .downloads li, .downloads li + li + li {
+        width:33%;
+    }
 }
 
 @media print {
-body {
-    padding:0.4in;
-    font-size:12pt;
-    color:#444;
-}
+    body {
+        padding:0.4in;
+        font-size:12pt;
+        color:#444;
+    }
 }  
