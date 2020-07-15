@@ -1,19 +1,20 @@
 <!-- Navigation -->
 <div class="navigation">
-    <div><a href="{{ site.baseurl }}/">Home</a></div>
+    <div><a href="{{ site.baseurl }}/"><p>Home</p></a></div>
 
-    <!-- TODO: Fix CSS on dropdown menu -->
     <div class="dropdown">
-        <span><a href="{{ site.baseurl }}/projects">Projects</a></span>
+        <span><a href="{{ site.baseurl }}/projects"><p><span style="font-size: small">&#9660;</span>  Projects</p></a></span>
         <div class="dropdown-content">
-            <div><a href="{{ site.baseurl }}/projects/academic"   >Academic</a></div>
-            <div><a href="{{ site.baseurl }}/projects/personal">Personal</a></div>
+
+            <!-- TODO: Fix highlight for active "a" elements in dropdown -->
+            <div><a href="{{ site.baseurl }}/projects/academic"><p>Academic</p></a></div>
+            <div><a href="{{ site.baseurl }}/projects/personal"><p>Personal</p></a></div>
         </div>
     </div>
 
-    <div><a href="{{ site.baseurl }}/orgs">Orgs</a></div>
-    <div><a href="{{ site.baseurl }}/awards">Awards</a></div>
-    <div><a href="{{ site.baseurl }}/pdfs/resume.pdf" target="_blank">Resume</a></div>
+    <div><a href="{{ site.baseurl }}/orgs"><p>Orgs</p></a></div>
+    <div><a href="{{ site.baseurl }}/awards"><p>Awards</p></a></div>
+    <div><a href="{{ site.baseurl }}/pdfs/resume.pdf" target="_blank"><p>Resume</p></a></div>
 
     <script src="{{ site.baseurl }}/assets/js/activenav.js"></script>
 
