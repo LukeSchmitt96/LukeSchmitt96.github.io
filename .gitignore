@@ -11,3 +11,6 @@ _site
 
 # VS Code Stuff
 *.code-workspace
+
+# Misc
+host_site.sh

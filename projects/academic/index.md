@@ -33,7 +33,7 @@ Modeled a robust 2D bipedal controller using Simulink that recovers standing bal
 
 <!-- Embedded Video -->
 <figure class="video_container" style="text-align: center;">
-    <video controls="false" allowfullscreen="false" loop="true" autoplay="true" width="100%" height="auto">
+    <video controls="false" allowfullscreen="false" loop="true" autoplay="true" width="80%" height="auto">
         <source src="/assets/img/projects/stepping.webm">
         Your browser does not support HTML5 videos.
     </video>

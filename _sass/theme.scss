@@ -8,6 +8,10 @@
 @import "sim";
 @import "display";
 
+html {
+  scroll-behavior: smooth;
+}
+
 h4, p {
   padding-left: 20px;
   padding-right: 20px;

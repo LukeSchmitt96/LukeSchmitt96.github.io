@@ -69,7 +69,6 @@ $grid-columns:  20% 20% 20% 20% 20%;
   padding: 0px 0px;
   z-index: 1;
   text-align: center;
-  height: $nav-height;
   padding-bottom: $nav-height;
   height: $nav-height * 2;
 }
@@ -79,8 +78,10 @@ $grid-columns:  20% 20% 20% 20% 20%;
 }
 
 .dropdown-content div a {
+  display: block;
   border: none;
   height: $nav-height;
+  padding-top: 10px;
 }
 
 .dropdown:hover .dropdown-content {
@@ -91,12 +92,7 @@ $grid-columns:  20% 20% 20% 20% 20%;
   box-shadow: 5px 16px 10px 8px rgba(0,0,0,0.2);
 }
 
-.dropdown-content a {
-  display: block;
-  padding: none;
-}
-
-.dropdown:hover .dropdown-content a {
+div.dropdown:hover div.dropdown-content div {
   height: $nav-height;
 }
 
