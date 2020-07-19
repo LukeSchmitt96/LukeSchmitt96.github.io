@@ -6,21 +6,6 @@ $grid-columns:  20% 20% 20% 20% 20%;
 /*****************/
 
 .navigation {
-
-  .active {
-    background-color: $nav-color;
-    color: black;
-
-    a:hover {
-      background-color: $nav-color;
-      color: black;
-    }
-  }
-
-  span {
-    height: $nav-height;
-  }
-
   display: grid;
   grid-template-columns: $grid-columns;
   grid-gap: 0px;
@@ -31,95 +16,111 @@ $grid-columns:  20% 20% 20% 20% 20%;
   margin-bottom: 30px;
   align-items: center;
   background-color: $nav-color;
-
-  div {
-    height: $nav-height;
-    background-color: $bg-color;
-
-    div a.active {
-      background-color: $nav-color;
-      color: black;
-    }
-
-    a {
-      border-top: solid $nav-color 3px;
-      text-align: center;
-      display: block;
-      text-decoration: none;
-      font-size: 20px;
-      height: 100%;
-      width: 100%;
-      text-align: center;
-      padding-top: 10px;
-
-      p {
-        margin: 0;
-        padding-left: 0;
-        padding-right: 0;
-        text-align: center;
-      }
-    }
-  }
-
-  .dropdown {
-    :hover {
-      display: block;
-      background-color: $bg-color;
-      box-shadow: 5px 11px 10px 8px rgba(0,0,0,0.2);
-      z-index: 1;
-
-      .dropdown-content {
-        display: block;
-        height: $nav-height;
-        color: black;
-        border: none;
-        box-shadow: 5px 16px 10px 8px rgba(0,0,0,0.2);
-      }
-
-      a {
-        background-color: $bg-color;
-      }
-    }
-
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: $bg-color;
-      width: 160px;
-      padding: 0px 0px;
-      z-index: 1;
-      text-align: center;
-      padding-bottom: $nav-height;
-      height: $nav-height * 2;
-    
-      div {
-        height: $nav-height;
-    
-        a {
-          display: block;
-          border: none;
-          height: $nav-height;
-          padding-top: 10px;
-        }
-      }
-    }
-  }
-
 }
+
+.navigation div {
+  height: $nav-height;
+  background-color: $bg-color;
+}
+
+.navigation div a {
+  border-top: solid $nav-color 3px;
+  text-align: center;
+}
+
+.navigation p {
+  margin: 0;
+  padding-left: 0;
+  padding-right: 0;
+  text-align: center;
+}
+
+.navigation span {
+  height: $nav-height;
+}
+
+.navigation div a {
+  display: block;
+  text-decoration: none;
+  font-size: 20px;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  padding-top: 10px;
+}
+
 
 //////////////////////////////////////
 ////////// dropdown content //////////
 //////////////////////////////////////
 
+.dropdown:hover {
+  display: block;
+  background-color: $bg-color;
+  box-shadow: 5px 11px 10px 8px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: $bg-color;
+  width: 160px;
+  padding: 0px 0px;
+  z-index: 1;
+  text-align: center;
+  padding-bottom: $nav-height;
+  height: $nav-height * 2;
+}
+
+.dropdown-content div {
+  height: $nav-height;
+}
+
+.dropdown-content div a {
+  display: block;
+  border: none;
+  height: $nav-height;
+  padding-top: 10px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  height: $nav-height;
+  color: black;
+  border: none;
+  box-shadow: 5px 16px 10px 8px rgba(0,0,0,0.2);
+}
+
 div.dropdown:hover div.dropdown-content div {
   height: $nav-height;
+}
+
+
+.dropdown:hover a {
+  background-color: $bg-color;
 }
 
 ///////////////////////////////
 ////// active navigation //////
 ///////////////////////////////
 
+.navigation .active {
+  background-color: $nav-color;
+  color: black;
+}
+
+.navigation .active a:hover {
+  background-color: $nav-color;
+  color: black;
+}
+
 .navigation a:hover:not(:active), .dropdown:hover:not(:active) {
+  background-color: $nav-color;
+  color: black;
+}
+
+.navigation div div a.active {
   background-color: $nav-color;
   color: black;
 }
