@@ -159,7 +159,7 @@
                 //                 = dt * tau
                 //                 = dt * ( u - g/l*cos(theta) )
 
-                pend.dtheta += dt * ( u - pend.m*sim.gravity*pend.l*Math.cos(pend.theta) )/pend.b;
+                pend.dtheta += dt * ( u - pend.m*gravity*pend.l*Math.cos(pend.theta) )/pend.b;
 
                 // update position using the ang velocity in this increment
                 pend.theta += dt * pend.dtheta;
