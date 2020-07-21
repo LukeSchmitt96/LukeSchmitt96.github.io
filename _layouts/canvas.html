@@ -4,7 +4,7 @@
 
   <head>
     <!-- Site Title -->
-    <title>Luke Schmitt | {{ page.title }} </title>
+    <title>Luke | {{ page.title }} </title>
     
     <!-- Link CSS -->
     <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
@@ -27,12 +27,6 @@
     <script src="https://unpkg.com/mathjs@7.0.0/dist/math.min.js"></script>               <!-- https://mathjs.org/ -->
     <script src="https://unpkg.com/optimization-js@latest/dist/optimization.js"></script> <!-- http://optimization-js.github.io/optimization-js/ -->
     <script type="application/javascript" src= {{ "assets/js/" | relative_url | append: page.script | append: ".js" }}></script>
-    <script>
-      MathJax = {
-        tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
-      };
-      </script>
-      <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 
   </head>
   
@@ -49,48 +43,15 @@
         <!-- Include Site Content -->
         {{ content }}
 
-        <div class="math_content">
-          <p>
-            Calculate the force acting on the pendulum
-          <p>
-            Derive the equations of motion using Lagrangian mechanics
-          </p>
-          <p>
-            $$ ml^2\ddot{\theta(t)}+mgl\cos(\theta(t)) = -b\dot{\theta}(t) + u(t) $$
-          </p>
-          <p>
-            \begin{align}
-            \dot{x} & = f(x,u) + g(x)*u         \\
-                    & = (u - mgl\cos(\theta))/b \\
-            \end{align}
-          </p>
-          <p>
-
-          </p>
-        </div>
-
         <!-- Simulation Control -->
         <div class="control_input_container">
-          <h2>Control Panel</h2>
-          <form id="control_input_form" class="controseany68604/20/2020seany68604/20/2020l_input_form" onsubmit="return false">
-            <p class="form_label">Control Input [N-m]</p>
-            <table>
-              <tr>
-                <th>
-                  <input type="range"  min="-2.5" max="2.5" 
-                           id ="control_slider" class="slider" step="0.1" value="0">
-                </th>
-                <th style="text-align: center;">
-                  <input type="number" min="-2.5" max="2.5" onclick="this.select();"
-                           id ="control_num" class="num" step="0.1" value="0">
-                </th>
-                <th style="text-align: center;">
-                  <input type="checkbox" id="sim_run_check" class="sim_run_check">
-                  <label for="sim_run_check">Pause Simulation</label>
-                </th>
-              </tr>
-            </table>
-          </form>
+          {% if page.input contains "pend_input" %}
+          {% include pend_input.html %}
+          {% endif %}
+
+          {% if page.output contains "integrator_input" %}
+          {% include integrator_input.html %}
+          {% endif %}
         </div>
 
         <!-- Simulation Container -->
@@ -102,9 +63,13 @@
         </div>
 
         <div class="output_container">
-          <h2>Outputs</h2> 
-          <span><p id="dtheta_output"></p></span>
-          <span><p id="theta_output"></p></span>
+          {% if page.output contains "pend_output" %}
+          {% include pend_output.html %}
+          {% endif %}
+
+          {% if page.output contains "integrator_output" %}
+          {% include integrator_output.html %}
+          {% endif %}
         </div>
 
       </section>
@@ -112,7 +77,6 @@
     </div>
 
     <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
-    <script src="{{ site.baseurl }}/assets/js/control_slider.js"></script>
 
   </body>
 </html>

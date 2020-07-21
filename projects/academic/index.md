@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Projects
+title: Academic Projects
 ---
 
-# Projects
+# Academic Projects
 
 ## [Carnegie Mellon University](#carnegie-mellon-university)
 

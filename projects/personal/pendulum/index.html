@@ -1,10 +1,33 @@
 ---
 layout: canvas
 title: Pendulum
-script: pend
+script: pend_script
 canvas: pend
+input: pend_input
+output: pend_output
+
 ---
 
 <h1>Pendulum Simulation</h1>
 
-<!--<img src="/assets/img/pend_diagram-Forces.png" >-->
+<div class="math_content">
+    
+    <p>This page shows a basic simulation of a simple pendulum.</p>
+    <p>We will first derive the dynamics of the pendulum.</p>
+    <p>Calculate the force acting on the pendulum</p>
+    <p>Derive the equations of motion using Lagrangian mechanics.</p>
+
+    <p>
+      $$ ml^2\ddot{\theta(t)}+mgl\cos(\theta(t)) = -b\dot{\theta}(t) + u(t) $$
+    </p>
+    <p>
+      \begin{align}
+      \dot{x} & = f(x,u) + g(x)*u         \\
+              & = (u - mgl\cos(\theta))/b \\
+      \end{align}
+    </p>
+
+</div>
+
+<script>MathJax = {tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}};</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
