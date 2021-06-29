@@ -1,3 +1,13 @@
+- event: Start Trossen
+  desc: >-
+    Started working as a Robotics Engineer at <a href="https://www.trossenrobotics.com/" target="_blank">Trossen Robotics</a>
+  int: Trossen
+  date: 2021/06/03
+- event: Graduate CMU
+  desc: >-
+    Graduated from Carnegie Mellon University with a 3.8 GPA
+  int: CMU
+  date: 2021/05/22
 - event: Start WEC
   desc: >-
     Began internship at <a href="https://www.westinghousenuclear.com/" target="_blank">Westinghouse Electric Company</a> as a robotics engineer in the Robotics & Tooling division
