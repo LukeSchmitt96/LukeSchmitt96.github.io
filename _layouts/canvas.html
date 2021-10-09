@@ -26,7 +26,6 @@
     
     <script src="https://unpkg.com/mathjs@7.0.0/dist/math.min.js"></script>               <!-- https://mathjs.org/ -->
     <script src="https://unpkg.com/optimization-js@latest/dist/optimization.js"></script> <!-- http://optimization-js.github.io/optimization-js/ -->
-    <script type="application/javascript" src= {{ "assets/js/" | relative_url | append: page.script | append: ".js" }}></script>
 
   </head>
   
@@ -45,20 +44,37 @@
 
         <!-- Simulation Control -->
         <div class="control_input_container">
-          {% if page.input contains "pend_input" %}
+          {% case page.input %}
+            {% when "pend_input" %}
+              {% include pend_input.html %}
+            {% when "integrator_input" %}
+              {% include integrator_input.html %}
+            {% when "sampling_input" %}
+              {% include sampling_input.html %}
+          {% endcase %}
+          <!-- {% if page.input contains "pend_input" %}
             {% include pend_input.html %}
           {% endif %}
 
-          {% if page.output contains "integrator_input" %}
+          {% if page.intput contains "integrator_input" %}
             {% include integrator_input.html %}
           {% endif %}
+
+          {% if page.intput contains "sampling_input" %}
+            {% include sampling_input.html %}
+          {% endif %} -->
         </div>
 
         <!-- Simulation Container -->
         <div id="canvas_container" class="canvas_container">
-          <canvas id="{{ page.canvas }}" class="{{ page.canvas }}" width="500px" height="500px">
+          <canvas
+            id="{{ page.canvas }}"
+            class="{{ page.canvas }}"
+            width="500px"
+            height="500px"
+            style="padding:10px;border-style:solid;border-width:1px;">
             Your browser does not support this simulation.
-            It was developed using FireFox 76.0.1 (64-bit) on Ubuntu 18.04.
+            It was developed using FireFox 76.0.1 (64-bit) on Ubuntu 20.04.
           </canvas>
         </div>
 
@@ -70,12 +86,17 @@
           {% if page.output contains "integrator_output" %}
           {% include integrator_output.html %}
           {% endif %}
+
+          {% if page.output contains "sampling_output" %}
+          {% include sampling_output.html %}
+          {% endif %}
         </div>
 
       </section>
 
     </div>
 
+    <script type="application/javascript" src= {{ "assets/js/" | relative_url | append: page.script | append: ".js" }}></script>
     <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
 
   </body>
