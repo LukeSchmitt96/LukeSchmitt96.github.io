@@ -1,6 +1,6 @@
 - event: Start Trossen
   desc: >-
-    Started working as a Robotics Engineer at <a href="https://www.trossenrobotics.com/" target="_blank">Trossen Robotics</a>
+    Started working as a Robotics Software Engineer at <a href="https://www.trossenrobotics.com/" target="_blank">Trossen Robotics</a>
   int: Trossen
   date: 2021/06/03
 - event: Graduate CMU
@@ -10,7 +10,7 @@
   date: 2021/05/22
 - event: Start WEC
   desc: >-
-    Began internship at <a href="https://www.westinghousenuclear.com/" target="_blank">Westinghouse Electric Company</a> as a robotics engineer in the Robotics & Tooling division
+    Began internship at <a href="https://www.westinghousenuclear.com/" target="_blank">Westinghouse Electric Company</a> as a robotics engineer in Robotics & Tooling
   inst: WEC
   date: 2020/05/18
 - event: Start CERLAB
