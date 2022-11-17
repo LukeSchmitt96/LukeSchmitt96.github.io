@@ -110,12 +110,12 @@ Jun 2017 - Nov 2017
 
 Modified a bicycle to make it rideable for a child who has spinocerebellar ataxia. Added custom foot pedals, custom seat with restraints, and motorized push-button braking system.
 
-[Link to local Fox8 article](http://fox8.com/2017/12/06/norton-six-year-old-gets-to-ride-a-bike-thanks-to-biomed-students-engineers/).
+[Link to local Fox8 article](https://web.archive.org/web/20221117174156/https://fox8.com/news/norton-six-year-old-gets-to-ride-a-bike-thanks-to-biomed-students-engineers/)
 
-#### [Tandem Wheelchair]()
+#### Tandem Wheelchair
 
 Sep 2016 - May 2017
 
 Designed dual wheelchair system for a family with two children who are wheelchair-bound.
 
-[Link to local Fox8 article](http://fox8.com/2017/08/11/university-of-akron-students-design-unique-wheelchair-to-help-two-children/).
+[Link to local Fox8 article](https://web.archive.org/web/20221117174304/https://fox8.com/news/university-of-akron-students-design-unique-wheelchair-to-help-two-children/)
