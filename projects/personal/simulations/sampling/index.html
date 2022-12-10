@@ -1,7 +1,7 @@
 ---
 layout: canvas
 title: Sampling-Based Planning
-script: sampling
+script: planning/sampling
 canvas: sampling
 input: sampling_input
 ---
@@ -10,10 +10,10 @@ input: sampling_input
 
 <div>
 
-    <p>This project implements the <a href="https://en.wikipedia.org/wiki/Rapidly-exploring_random_tree" target="_blank">rapidly-exploring random tree (RRT)</a> 
-        algorithm to find a path between two nodes in a space while avoiding obstacles. 
-        This project was written in Python, reusing the node and planner base classes from the A* project.
-        The RRT algorithm performs the following steps:</p>
+    <p>This project implements the <a href="https://en.wikipedia.org/wiki/Rapidly-exploring_random_tree" target="_blank">rapidly-exploring random tree (RRT)</a>
+       algorithm to find a path between two nodes in a space while avoiding obstacles.
+       This project was written in Python, reusing the node and planner base classes from the A* project.
+       The RRT algorithm performs the following steps:</p>
     <ol>
         <li>Randomly sample the space (occasionally sampling the goal position). If the sample is occupied by an obstacle, skip.</li>
         <li>Find the node closest to the sample. If the line between the sample and the closest node is intersected by an obstacle, skip.</li>

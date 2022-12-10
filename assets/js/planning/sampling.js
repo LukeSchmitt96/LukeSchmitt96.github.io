@@ -161,10 +161,9 @@ class SamplingPlanner {
             (-1).toString(), 
             goal_[0], 
             goal_[1], 
-            this.goal_pos
-            )
-            this.goal_node.fill_color = "#0000FF";
-            this.goal_node.r = 10;
+            this.goal_pos);
+        this.goal_node.fill_color = "#0000FF";
+        this.goal_node.r = 10;
 
         // dictionary for nodes
         this.nodes = {"1": this.start_node};
